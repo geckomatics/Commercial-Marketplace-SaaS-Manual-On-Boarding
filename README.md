@@ -1,6 +1,6 @@
 - - - -
 
-# :point_right: This repo is Deprecated and no longer maintained. Please see the currently maintained repo here, [SaaS Accelerator](aka.ms/saasaccelerator). #
+# :point_right: This repo is Deprecated and no longer maintained. Please see the currently maintained repo here, [SaaS Accelerator](https://aka.ms/saasaccelerator). #
 
 - - - -
 

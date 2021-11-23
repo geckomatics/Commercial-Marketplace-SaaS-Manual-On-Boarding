@@ -60,7 +60,7 @@
     "appServiceName": "[parameters('webAppName')]",
     "appServicePlanName": "[concat(parameters('webAppName'), '-plan')]",
     "storageAccountName": "[concat(parameters('webAppName'), 'store')]",
-    "gitRepoUrl": "https://github.com/microsoft/Commercial-Marketplace-SaaS-Manual-On-Boarding",
+    "gitRepoUrl": "https://github.com/geckomatics/Commercial-Marketplace-SaaS-Manual-On-Boarding",
     "location": "[resourceGroup().location]",
     "storageAccountType": "Standard_LRS"
   },

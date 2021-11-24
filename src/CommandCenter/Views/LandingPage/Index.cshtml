@@ -25,7 +25,7 @@ else
                 <div class="accordion" id="landingPageComponents">
                     <div class="accordion-item">
                         <h2 class="accordion-header" id="headingOne">
-                            &mbsp;
+                            Customer's contact information;
                         </h2>
                         <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne">
                             <div class="accordion-body">
@@ -144,129 +144,6 @@ else
                                                     </div>
                                                 </div>
                                             </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="accordion-item">
-                        <h2 class="accordion-header" id="headingTwo">
-                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
-                                You can collect additional information as the first step of the onboarding process.
-                            </button>
-                        </h2>
-                        <div id="collapseTwo" class="accordion-collapse collapse show" aria-labelledby="headingTwo">
-                            <div class="accordion-body">
-                                <div class="panel panel-default">
-                                    <div class="row">
-                                        <div class="col-sm-6">
-                                            <label class="form-label">@Html.DisplayNameFor(model => model.Region):</label>
-                                        </div>
-                                        <div class="col-sm-6">
-                                            @Html.DropDownListFor(m => m.Region, new SelectList(Enum.GetValues(typeof(TargetContosoRegionEnum))), "Select region")
-                                        </div>
-                                    </div>
-                                    <br />
-                                    <div class="row">
-                                        <div class="col-sm-6">
-                                            <label class="form-label">@Html.DisplayNameFor(model => model.BusinessUnitContactEmail):</label>
-                                        </div>
-                                        <div class="col-sm-6">
-                                            <div class="row">
-                                                <div class="col-sm-6">
-                                                    <input asp-for="BusinessUnitContactEmail" type="email" class="form-control" />
-                                                </div>
-                                                <div class="col-sm-6">
-                                                    <p>*The purchaser (who sees this page) can be different than the actual user of the solution.</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="accordion-item">
-                        <h2 class="accordion-header" id="headingThree">
-                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="true" aria-controls="collapseThree">
-                                Example items from the marketplace API result.
-                            </button>
-                        </h2>
-                        <div id="collapseThree" class="accordion-collapse collapse show" aria-labelledby="headingThree">
-                            <div class="accordion-body">
-                                <div class="panel panel-default">
-
-                                    <div class="row">
-                                        <div class="col-sm-6">
-                                            <label class="form-label">@Html.DisplayNameFor(model => model.OfferId):</label>
-                                        </div>
-                                        <div class="col-sm-6">
-                                            <label class="form-label">@Html.DisplayFor(model => model.OfferId) </label>
-                                            <input asp-for="OfferId" type="hidden" class="form-control" />
-                                        </div>
-                                    </div>
-
-                                    <div class="row">
-                                        <div class="col-sm-6">
-                                            <label class="form-label">@Html.DisplayNameFor(model => model.PlanId):</label>
-                                        </div>
-                                        <div class="col-sm-6">
-                                            <label class="form-label">@Html.DisplayFor(model => model.PlanId) </label>
-                                            <input asp-for="PlanId" type="hidden" class="form-control" />
-                                        </div>
-                                    </div>
-
-                                    <div class="row">
-                                        <div class="col-sm-6">
-                                            <label class="form-label">@Html.DisplayNameFor(model => model.PurchaserTenantId):</label>
-                                        </div>
-                                        <div class="col-sm-6">
-                                            <label class="form-label">@Html.DisplayFor(model => model.PurchaserTenantId) </label>
-                                            <input asp-for="PurchaserTenantId" type="hidden" class="form-control" />
-                                        </div>
-                                    </div>
-
-                                    <div class="row">
-                                        <div class="col-sm-6">
-                                            <label class="form-label">@Html.DisplayNameFor(model => model.BeneficiaryTenantId):</label>
-                                        </div>
-                                        <div class="col-sm-6">
-                                            <label class="form-label">@Html.DisplayFor(model => model.BeneficiaryTenantId) </label>
-                                            <input asp-for="BeneficiaryTenantId" type="hidden" class="form-control" />
-                                        </div>
-                                    </div>
-
-                                    @if (Model.SubscriptionStatus == SubscriptionStatusEnum.Subscribed)
-                                    {
-                                    <div class="row">
-                                        <div class="col-sm-6">
-                                            @Html.DisplayNameFor(model => model.AvailablePlans)
-                                        </div>
-
-                                        <div class="col-sm-6">
-                                            @Html.DropDownListFor(m => m.Region, new SelectList(Model.AvailablePlans, "PlanId", "DisplayName"), "Choose a new plan")
-                                        </div>
-                                    </div>
-                                    }
-
-                                    <div class="row">
-                                        <div class="col-sm-6">
-                                            <label class="form-label">@Html.DisplayNameFor(model => model.SubscriptionId):</label>
-                                        </div>
-                                        <div class="col-sm-6">
-                                            <label class="form-label">@Html.DisplayFor(model => model.SubscriptionId) </label>
-                                            <input asp-for="SubscriptionId" type="hidden" class="form-control" />
-                                        </div>
-                                    </div>
-
-                                    <div class="row">
-                                        <div class="col-sm-6">
-                                            @Html.DisplayNameFor(model => model.SubscriptionName)
-                                        </div>
-                                        <div class="col-sm-6">
-                                            @Html.DisplayFor(model => model.SubscriptionName)
-                                            <input asp-for="SubscriptionName" type="hidden" class="form-control" />
                                         </div>
                                     </div>
                                 </div>

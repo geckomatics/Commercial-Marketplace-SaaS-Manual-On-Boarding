@@ -32,7 +32,7 @@ namespace CommandCenter.Models
         /// <summary>
         ///  Gets or sets email.
         /// </summary>
-        [Display(Name = "Preferred user name")]
+        [Display(Name = "User name")]
         public string EmailFromClaims { get; set; }
 
         /// <summary>
@@ -134,5 +134,11 @@ namespace CommandCenter.Models
         /// </summary>
         [Display(Name = "Purchaser Email")]
         public string PurchaserEmail { get; set; }
+
+        /// <summary>
+        /// Gets or sets the phone number.
+        /// </summary>
+        [Display(Name = "Phone Number")]
+        public string PhoneNumber { get; set; }
     }
 }
